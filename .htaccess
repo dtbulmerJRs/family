@@ -1,0 +1,6 @@
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+# only redirect everything not pointing to blog. If pointing to blog, simply use blog folder.
+RewriteRule ^(.*) index.php [QSA,L] 
